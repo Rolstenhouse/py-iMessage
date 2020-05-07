@@ -5,7 +5,9 @@ py-imessage
 
 Installation
 ------------
+
 .. code:: bash
+
     pip install py-imessage
 
     # Disable system integrity protection in order to allow access to chat.db
@@ -16,6 +18,7 @@ Sample Usage
 ------------
 
 .. code:: python
+
     from py-imessage import imessage
     
     phone = "1234567890"
@@ -48,6 +51,7 @@ Send a message to a new or an existing contact!
 
 .. list-table:: Returns a **string**, the GUID 
     :header-rows: 1
+
     * - Type
       - Description
     * - string
@@ -65,6 +69,7 @@ Check whether a message you sent has been delivered and read (if read receipts t
 
 .. list-table:: Returns a **dict**, with following fields
     :header-rows: 1
+
     * - Field 
       - Type
       - Description
@@ -99,6 +104,7 @@ Check whether a phone number is registered to an iPhone or an Android device. NO
 
 .. list-table:: Returns a **boolean**, compatibility 
     :header-rows: 1
+    
     * - Type
       - Description
     * - boolean
