@@ -1,10 +1,15 @@
+===========
 py-imessage
 ===========
 |License|
 
+py-imessage is a library to send iMessages from your computer. It was originally used to build an API for iMessages; however, Apple doesn't support third-parties using iMessage over a few hundred marketing messages per day. 
 
+------------
 Installation
 ------------
+
+Run the following commands on the terminal
 
 .. code:: bash
 
@@ -13,7 +18,7 @@ Installation
     # Disable system integrity protection in order to allow access to chat.db
     csrutil disable
 
-
+------------
 Sample Usage
 ------------
 
@@ -23,7 +28,7 @@ Sample Usage
     
     phone = "1234567890"
 
-    if !imessage.check_compatibility(number):
+    if not imessage.check_compatibility(number):
         return "Not an iPhone" 
     
     guid = imessage.send(number, "Hello World!"
@@ -34,18 +39,22 @@ Sample Usage
 
     return f'Message was read at {resp.date_read}' 
 
+-------------
 Documentation
 -------------
 
 Sending a message
-~~~~~~~~~~~~~~~~~
+-----------------
 Send a message to a new or an existing contact! 
 
-**.send(phone, message)**
+**.send(phone, message)** 
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 *Args*
 
 **Phone** | ten-digit phone number of string type format XXXXXXXXXXX i.e. "1234567890"
+
+*Response*
 
 **Message** | The message you plan to send. i.e. "Hi!"
 
@@ -58,14 +67,18 @@ Send a message to a new or an existing contact!
       - GUID unique to the message (used for checking on status)
 
 Message status
-~~~~~~~~~~~~~~
+--------------
+
 Check whether a message you sent has been delivered and read (if read receipts turned on). 
 
-**.status(guid)** | guid returned from sending a message
+**.status(guid)**
+~~~~~~~~~~~~~~~~~
 
 *Args*
 
-**Phone** | ten-digit phone number of string type format XXXXXXXXXXX i.e. "1234567890"
+**Guid** | guid returned from sending a message
+
+*Response*
 
 .. list-table:: Returns a **dict**, with following fields
     :header-rows: 1
@@ -74,37 +87,41 @@ Check whether a message you sent has been delivered and read (if read receipts t
       - Type
       - Description
       - Sample
-    * - guid
+    * - **guid**
       - string
       - guid that was passed in to the function
       - "ea3d4094-4bb9-4b28-a944-6b168968ec91"
-    * - date_submitted
+    * - **date_submitted**
       - datetime
       - date message was submitted
       - "Sun, 12 Apr 2020 05:46:48 GMT"
-    * - date_delivered
+    * - **date_delivered**
       - datetime
       - date message was delivered to recipient's phone
       - "Sun, 12 Apr 2020 05:46:49 GMT"
-    * - date_read
+    * - **date_read**
       - datetime
       - date message was read on recipient's phone
       - "Sun, 12 Apr 2020 05:47:38 GMT"
 
 
 Checking iMessage compatibility
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-------------------------------
+
 Check whether a phone number is registered to an iPhone or an Android device. NOTE: This method is exceptionally slow, so you should cache the response. 
 
 **.check_compatibility(phone)**
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 *Args*
 
 **Phone** | ten-digit phone number of string type format XXXXXXXXXXX i.e. "1234567890"
 
+*Response*
+
 .. list-table:: Returns a **boolean**, compatibility 
     :header-rows: 1
-    
+
     * - Type
       - Description
     * - boolean
