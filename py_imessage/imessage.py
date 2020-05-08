@@ -1,4 +1,4 @@
-import db_conn
+from py_imessage import db_conn
 import os
 import subprocess
 from time import sleep
@@ -32,7 +32,7 @@ def check_compatibility(phone):
     is_imessage = False
     
     dir_path = os.path.dirname(os.path.realpath(__file__))
-    relative_path = 'osa/check_imessage.js'
+    relative_path = 'osascript/check_imessage.js'
     path = f'{dir_path}/{relative_path}'
     cmd = f'osascript -l JavaScript {path} {phone}'
     # Gets all the output from the imessage

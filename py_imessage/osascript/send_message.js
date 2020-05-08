@@ -10,14 +10,11 @@ var argv = []
 var argc = args.count
 for (var i = 4; i < argc; i++) {
     // skip 3-word run command at top and this file's name
-    console.log($(args.objectAtIndex(i)).js)       
     argv.push(ObjC.unwrap(args.objectAtIndex(i)))  
 }
-console.log(argv);                                 
 
 const number = argv[0]
 const message = argv[1]
-console.log(sendNewMessage(number, message))
 
 function sendNewMessage(number, message) {
     messagesApp.activate()

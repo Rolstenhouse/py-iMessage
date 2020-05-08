@@ -15,7 +15,7 @@ with open (join(dirname(__file__), 'requirements.txt'), 'r') as f:
 
 setup(
     name='py-iMessage',
-    version=1.0,
+    version=1.2,
     url='https://github.com/rolstenhouse/py-imessage',
     license='MIT',
     author='Rob Olsthoorn',

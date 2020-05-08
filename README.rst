@@ -28,16 +28,16 @@ Sample Usage
     
     phone = "1234567890"
 
-    if not imessage.check_compatibility(number):
-        return "Not an iPhone" 
+    if not imessage.check_compatibility(phone):
+        print("Not an iPhone")
     
-    guid = imessage.send(number, "Hello World!"
+    guid = imessage.send(phone, "Hello World!")
     
     # Let the recipient read the message
     sleep(5)
     resp = imessage.status(guid)
 
-    return f'Message was read at {resp.date_read}' 
+    print(f'Message was read at {resp.get("date_read")}')
 
 -------------
 Documentation
@@ -90,7 +90,7 @@ Check whether a message you sent has been delivered and read (if read receipts t
     * - **guid**
       - string
       - guid that was passed in to the function
-      - "ea3d4094-4bb9-4b28-a944-6b168968ec91"
+      - "3A146100-D269-4F35-BDB4-EB2FF7DBDF0F"
     * - **date_submitted**
       - datetime
       - date message was submitted
