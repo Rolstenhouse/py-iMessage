@@ -1,7 +1,4 @@
 from flask import Flask, request, jsonify
-from time import sleep
-import os
-import subprocess
 from py_imessage import imessage
 
 app = Flask(__name__)

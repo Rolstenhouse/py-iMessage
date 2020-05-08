@@ -24,7 +24,7 @@ Sample Usage
 
 .. code:: python
 
-    from py-imessage import imessage
+    from py_imessage import imessage
     
     phone = "1234567890"
 

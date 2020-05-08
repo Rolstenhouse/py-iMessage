@@ -10,22 +10,19 @@
 from setuptools import setup
 from os.path import join, dirname
 
-# with open(join(dirname(__file__), 'flask_cors/version.py'), 'r') as f:
-#     exec(f.read())
-
 with open (join(dirname(__file__), 'requirements.txt'), 'r') as f:
     install_requires = f.read().split("\n")
 
 setup(
     name='py-iMessage',
-    version=__version__,
+    version=1.0,
     url='https://github.com/rolstenhouse/py-imessage',
     license='MIT',
     author='Rob Olsthoorn',
     author_email='rolsthoorn12@gmail.com',
     description="Support for sending/receiving iMessages",
     long_description=open('README.rst').read(),
-    packages=['py-imessage'],
+    packages=['py_imessage'],
     zip_safe=False,
     include_package_data=True,
     platforms='any',

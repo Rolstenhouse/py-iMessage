@@ -4,3 +4,6 @@ env
 .git
 .pyc
 __pycache__
+build
+dist
+py_iMessage.egg-info/
