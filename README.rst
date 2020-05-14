@@ -1,7 +1,7 @@
 ===========
 py-imessage
 ===========
-|License||Downloads|
+|License| |Downloads|
 
 py-imessage is a library to send iMessages from your computer. It was originally used to build an API for iMessages; however, Apple doesn't support third-parties using iMessage over a few hundred marketing messages per day. 
 
