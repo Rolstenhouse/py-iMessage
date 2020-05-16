@@ -17,7 +17,8 @@ Run the following commands on the terminal
 
     # Disable system integrity protection in order to allow access to chat.db
     csrutil disable 
-    # if the above command fails try https://apple.stackexchange.com/questions/208478/how-do-i-disable-system-integrity-protection-sip-aka-rootless-on-macos-os-x
+    
+If running `csrutil disable` doesn't work. Try `this stackoverflow post https://apple.stackexchange.com/questions/208478/how-do-i-disable-system-integrity-protection-sip-aka-rootless-on-macos-os-x`_
 
 ------------
 Sample Usage
