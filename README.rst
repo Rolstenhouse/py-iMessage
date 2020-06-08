@@ -1,7 +1,7 @@
 ===========
 py-imessage
 ===========
-|License|
+|License| |Downloads|
 
 py-imessage is a library to send iMessages from your computer. It was originally used to build an API for iMessages; however, Apple doesn't support third-parties using iMessage over a few hundred marketing messages per day. 
 
@@ -16,7 +16,9 @@ Run the following commands on the terminal
     pip install py-imessage
 
     # Disable system integrity protection in order to allow access to chat.db
-    csrutil disable
+    csrutil disable 
+    
+If running :code:`csrutil disable` doesn't work. Try `this stackoverflow post <https://apple.stackexchange.com/questions/208478/how-do-i-disable-system-integrity-protection-sip-aka-rootless-on-macos-os-x>`_
 
 ------------
 Sample Usage
@@ -25,6 +27,7 @@ Sample Usage
 .. code:: python
 
     from py_imessage import imessage
+    import sleep
     
     phone = "1234567890"
 
@@ -134,3 +137,6 @@ Please create an issue. Or feel free to add a PR!
 
 .. |License| image:: http://img.shields.io/:license-mit-blue.svg
    :target: https://pypi.python.org/pypi/Flask-Cors/
+   
+.. |Downloads| image:: https://pepy.tech/badge/py-imessage
+   :target: https://pepy.tech/project/py-imessage
