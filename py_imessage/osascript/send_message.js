@@ -16,6 +16,8 @@ for (var i = 4; i < argc; i++) {
 const number = argv[0]
 const message = argv[1]
 
+sendNewMessage(number, message)
+
 function sendNewMessage(number, message) {
     messagesApp.activate()
 
