@@ -27,6 +27,7 @@ Sample Usage
 .. code:: python
 
     from py_imessage import imessage
+    import sleep
     
     phone = "1234567890"
 
