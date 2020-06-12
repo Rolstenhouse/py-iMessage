@@ -15,7 +15,7 @@ with open (join(dirname(__file__), 'requirements.txt'), 'r') as f:
 
 setup(
     name='py-iMessage',
-    version=1.6,
+    version=1.7,
     url='https://github.com/rolstenhouse/py-imessage',
     license='MIT',
     author='Rob Olsthoorn',
@@ -25,7 +25,7 @@ setup(
     packages=['py_imessage'],
     zip_safe=False,
     include_package_data=True,
-    platforms='any',
+    platforms='Operating System :: MacOS :: MacOS X',
     install_requires=install_requires,
     tests_require=[
         'nose'
@@ -35,7 +35,7 @@ setup(
         'Environment :: Web Environment',
         'Intended Audience :: Developers',
         'License :: OSI Approved :: MIT License',
-        'Operating System :: OS Independent',
+        'Operating System :: MacOS :: MacOS X',
         'Programming Language :: Python',
         'Programming Language :: Python :: 3',
         'Programming Language :: Python :: 3.4',
