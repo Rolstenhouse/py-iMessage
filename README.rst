@@ -5,6 +5,12 @@ py-imessage
 
 py-imessage is a library to send iMessages from your Mac computer (it does not work on Windows/Linux). It was originally used to build an API for iMessages; however, Apple doesn't support third-parties using iMessage over a few hundred marketing messages per day. 
 
+.. raw:: html
+
+    <embed>
+        <script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="rolstenhouse" data-color="#FFDD00" data-emoji=""  data-font="Cookie" data-text="Buy me a coffee" data-outline-color="#000000" data-font-color="#000000" data-coffee-color="#ffffff" ></script>
+    </embed>
+
 ------------
 Installation
 ------------
