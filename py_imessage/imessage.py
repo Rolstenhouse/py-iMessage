@@ -1,9 +1,25 @@
 from py_imessage import db_conn
 import os
 import subprocess
+import platform
 from time import sleep
 from shlex import quote
 
+import sys
+if sys.version_info[0] < 3:
+    print("Must be using Python 3")
+
+print(platform.mac_ver())
+
+def _check_mac_ver():
+    mac_ver, _, _ = platform.mac_ver()
+    mac_ver = float('.'.join(mac_ver.split('.')[:2]))
+    if mac_ver >= 10.16:
+        print(mac_ver)
+    else:
+        print("outdated OS")
+    return mac_ver
+        
 
 def send(phone, message):
     dir_path = os.path.dirname(os.path.realpath(__file__))
@@ -29,12 +45,13 @@ def status(guid):
 
 
 def check_compatibility(phone):
+    mac_ver = _check_mac_ver()
     is_imessage = False
     
     dir_path = os.path.dirname(os.path.realpath(__file__))
     relative_path = 'osascript/check_imessage.js'
     path = f'{dir_path}/{relative_path}'
-    cmd = f'osascript -l JavaScript {path} {phone}'
+    cmd = f'osascript -l JavaScript {path} {phone} {mac_ver}'
     # Gets all the output from the imessage
     output = subprocess.check_output(cmd, shell=True)
 

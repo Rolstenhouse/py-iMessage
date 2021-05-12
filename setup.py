@@ -24,6 +24,7 @@ setup(
     long_description=open('README.rst').read(),
     packages=['py_imessage'],
     zip_safe=False,
+    python_requires='>=3',
     include_package_data=True,
     platforms='Operating System :: MacOS :: MacOS X',
     install_requires=install_requires,

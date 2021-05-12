@@ -26,8 +26,10 @@ function sendNewMessage(number, message) {
     
     seApp.keystroke('n', {using: 'command down'})
     seApp.keystroke(number)
+    delay(0.1);
     seApp.keyCode(36) //enter
     seApp.keystroke(message)
+    delay(0.1);
     seApp.keyCode(36)
 
     return getHandleForNumber(number)
