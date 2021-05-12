@@ -1,3 +1,5 @@
+No longer under active development. 
+
 ===========
 py-imessage
 ===========
