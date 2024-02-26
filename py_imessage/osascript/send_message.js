@@ -20,16 +20,20 @@ sendNewMessage(number, message)
 
 function sendNewMessage(number, message) {
     messagesApp.activate()
-
+    //EDIT THIS TOO WORK ON SONOMA( tested ) , Current bug: puts number and message into number input
     // Adjust delay as necessary
     delay(0.2)
     
     seApp.keystroke('n', {using: 'command down'})
     seApp.keystroke(number)
-    delay(0.1);
-    seApp.keyCode(36) //enter
+    delay(1);
+    seApp.keyCode(48)
+    delay(0.2);
+    seApp.keyCode(48)
+    //USE TAB TWICE TOO GO DOWN TOO MESSAGE INPUT
+    delay(0.2);
     seApp.keystroke(message)
-    delay(0.1);
+    delay(0.2);
     seApp.keyCode(36)
 
     return getHandleForNumber(number)
