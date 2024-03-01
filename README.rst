@@ -1,4 +1,5 @@
-No longer under active development. 
+No longer under active development. Check out `kevinschaich/py-imessage-shortcuts <https://github.com/kevinschaich/py-imessage-shortcuts>`_ if you are on macOS Monterey or later.
+
 
 ===========
 py-imessage
